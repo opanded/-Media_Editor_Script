@@ -1,5 +1,5 @@
 # Media_Editor_Script
-自用脚本。
+自用脚本，所有脚本都需要基于ffmpeg和Windows平台。
 
 ## bat文件格式
 ANSI；GB
