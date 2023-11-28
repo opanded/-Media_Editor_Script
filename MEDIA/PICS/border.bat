@@ -22,3 +22,11 @@ mkdir bordered
 for %%a in (*.png *.jpg *.jpeg *.webp) do (
     ffmpeg -i "%%a" -vf "pad=width=iw+2*%borderThickness%:height=ih+2*%borderThickness%:x=%borderThickness%:y=%borderThickness%:color=%color%" "bordered\%%~na_bordered.png"
 )
+rem 转换完成，打印提示信息
+echo.
+echo 转换完成！
+rem 提供两个选项，按x结束进程，按c跳转到指定的网址
+choice /c xc /m "按x退出，按c跳转到https://space.bilibili.com/4262942"
+rem 判断用户的选择，执行相应的操作
+if errorlevel 2 start https://space.bilibili.com/4262942
+if errorlevel 1 exit

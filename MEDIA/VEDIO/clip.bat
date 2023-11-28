@@ -1,5 +1,5 @@
 @echo off
-rem ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½
+rem ÉèÖÃ±äÁ¿
 set input_video=
 set start_time=00:00:00
 set end_time=00:01:31
@@ -7,62 +7,60 @@ set output_video=
 set output_format=
 
 :input_video_loop
-set /p input_video=ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+set /p input_video=ÇëÊäÈëÊäÈëÊÓÆµµÄÃû³Æ£¨²»ÒªÍü¼ÇÀ©Õ¹Ãû£©£º
 if "%input_video%"=="" (
-    echo ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë¡£
+    echo ÄãÃ»ÓĞÊäÈëÈÎºÎÄÚÈİ£¬ÇëÖØĞÂÊäÈë¡£
     goto input_video_loop
 ) else (
-    echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½%input_video%
+    echo ÄãÊäÈëµÄÊÓÆµÃû³ÆÊÇ£º%input_video%
 )
 
 :start_time_loop
-set /p start_time=ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¼ï¿½ï¿½Ä¿ï¿½Ê¼Ê±ï¿½ä£¨ï¿½ï¿½Ê½Îª hh:mm:ssï¿½ï¿½ï¿½ï¿½
+set /p start_time=ÇëÊäÈë²Ã¼ôµÄ¿ªÊ¼Ê±¼ä£¨¸ñÊ½Îª hh:mm:ss£©£º
 if "%start_time%"=="" (
-    echo ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Ä¬ï¿½ï¿½Öµ 00:00:00ï¿½ï¿½
+    echo ÄãÃ»ÓĞÊäÈëÈÎºÎÄÚÈİ£¬½«Ê¹ÓÃÄ¬ÈÏÖµ 00:00:00¡£
     set start_time=00:00:00
 ) else (
-    echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½Ê¼Ê±ï¿½ï¿½ï¿½Ç£ï¿½%start_time%
+    echo ÄãÊäÈëµÄ¿ªÊ¼Ê±¼äÊÇ£º%start_time%
 )
 
 :end_time_loop
-set /p end_time=ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¼ï¿½ï¿½Ä½ï¿½ï¿½ï¿½Ê±ï¿½ä£¨ï¿½ï¿½Ê½Îª hh:mm:ssï¿½ï¿½ï¿½ï¿½
+set /p end_time=ÇëÊäÈë²Ã¼ôµÄ½áÊøÊ±¼ä£¨¸ñÊ½Îª hh:mm:ss£©£º
 if "%end_time%"=="" (
-    echo ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Ä¬ï¿½ï¿½Öµ 00:01:31ï¿½ï¿½
+    echo ÄãÃ»ÓĞÊäÈëÈÎºÎÄÚÈİ£¬½«Ê¹ÓÃÄ¬ÈÏÖµ 00:01:31¡£
     set end_time=00:01:31
 ) else (
-    echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ç£ï¿½%end_time%
+    echo ÄãÊäÈëµÄ½áÊøÊ±¼äÊÇ£º%end_time%
 )
 
 :output_video_loop
-set /p output_video=ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+set /p output_video=ÇëÊäÈëÊä³öÊÓÆµµÄÃû³Æ£¨²»ÒªÊäÈëÀ©Õ¹Ãû£©£º
 if "%output_video%"=="" (
-    echo ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë¡£
+    echo ÄãÃ»ÓĞÊäÈëÈÎºÎÄÚÈİ£¬ÇëÖØĞÂÊäÈë¡£
     goto output_video_loop
 ) else (
-    echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½%output_video%
+    echo ÄãÊäÈëµÄÊÓÆµÃû³ÆÊÇ£º%output_video%
 )
 
 :output_format_loop
-set /p output_format=ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½Ä¸ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mp4, mkv, flv, aviï¿½È£ï¿½ï¿½ï¿½
+set /p output_format=ÇëÊäÈëÊä³öÊÓÆµµÄ¸ñÊ½£¨±ÈÈçmp4, mkv, flv, aviµÈ£©£º
 if "%output_format%"=="" (
-    echo ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë¡£
+    echo ÄãÃ»ÓĞÊäÈëÈÎºÎÄÚÈİ£¬ÇëÖØĞÂÊäÈë¡£
     goto output_format_loop
 ) else (
-    echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½Ê½ï¿½Ç£ï¿½%output_format%
+    echo ÄãÊäÈëµÄÊÓÆµ¸ñÊ½ÊÇ£º%output_format%
 )
 
 ffmpeg -i %input_video% -ss %start_time% -to %end_time% -c:v copy -c:a copy %output_video%.%output_format%
 
-echo ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÆµÎªï¿½ï¿½%output_video%.%output_format%
+echo ÊÓÆµ¼ôÇĞÍê³É£¬Êä³öÊÓÆµÎª£º%output_video%.%output_format%
 
 :option_loop
-echo ï¿½ë°´ï¿½ï¿½ï¿½Â¼ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½
-echo 1ï¿½ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½
-echo 2ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½https://space.bilibili.com/4262942
-choice /c xv /n
-if errorlevel 2 (
-    start https://space.bilibili.com/4262942
-    goto option_loop
-) else if errorlevel 1 (
-    exit
-)
+rem ×ª»»Íê³É£¬´òÓ¡ÌáÊ¾ĞÅÏ¢
+echo.
+echo ×ª»»Íê³É£¡
+rem Ìá¹©Á½¸öÑ¡Ïî£¬°´x½áÊø½ø³Ì£¬°´cÌø×ªµ½Ö¸¶¨µÄÍøÖ·
+choice /c xc /m "°´xÍË³ö£¬°´cÌø×ªµ½https://space.bilibili.com/4262942"
+rem ÅĞ¶ÏÓÃ»§µÄÑ¡Ôñ£¬Ö´ĞĞÏàÓ¦µÄ²Ù×÷
+if errorlevel 2 start https://space.bilibili.com/4262942
+if errorlevel 1 exit
